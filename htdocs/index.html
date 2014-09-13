@@ -10,8 +10,8 @@ $(function(){
 
 	console.log('form全体 ---');
 	//全体のidを指定
-	var csvGen1 = new kk.FormToExcelLogger('ask_your_favorite');
-	var formText = csvGen1.getText();
+	var logger1 = new kk.FormToExcelLogger('ask_your_favorite');
+	var formText = logger1.getText();
 	console.log(formText);
 
 
@@ -19,8 +19,8 @@ $(function(){
 	console.log('部分 ---');
 
 	//部分のidを指定
-	var csvGen2 = new kk.FormToExcelLogger('fav_fruit_container');
-	var fruitText = csvGen2.getText();
+	var logger2 = new kk.FormToExcelLogger('fav_fruit_container');
+	var fruitText = logger2.getText();
 	console.log(fruitText);
 });
 </script>
