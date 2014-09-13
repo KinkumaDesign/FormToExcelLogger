@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>sample</title>
+<script type="text/javascript" src="jquery-1.11.0.js"></script>
+<script type="text/javascript" src="form_to_excel_logger.js"></script>
+<script>
+$(function(){
+
+	console.log('form全体 ---');
+	//全体のidを指定
+	var csvGen1 = new kk.FormToExcelLogger('ask_your_favorite');
+	var formText = csvGen1.getText();
+	console.log(formText);
+
+
+
+	console.log('部分 ---');
+
+	//部分のidを指定
+	var csvGen2 = new kk.FormToExcelLogger('fav_fruit_container');
+	var fruitText = csvGen2.getText();
+	console.log(fruitText);
+});
+</script>
+<style>
+body{
+	font-family: sans-serif;
+}
+</style>
+</head>
+<body>
+
+<form id="ask_your_favorite">
+
+<section id="fav_fruit_container">
+<h3>すきな果物</h3>
+
+<ul>
+<li>
+<input type="radio" id="fruit1" name="fruit" value="みかん" />
+<label for="fruit1">みかん</label>
+</li>
+<li>
+<input type="radio" id="fruit2" name="fruit" value="りんご" />
+<label for="fruit2">りんご</label>
+</li>
+<li>
+<input type="radio" id="fruit3" name="fruit" value="バナナ" />
+<label for="fruit3">バナナ</label>
+</li>
+</ul>
+
+</section>
+
+
+<section id="fav_color_container">
+<h3>すきな色</h3>
+<select id="fav_color" name="fav_color">
+<option name="red">赤</option>
+<option name="blue">青</option>
+<option name="green">緑</option>
+</select>
+</section>
+
+<section id="fav_color_container">
+<h3>何かひとこと</h3>
+<textarea id="comment" name="comment"></textarea>
+</section>
+</form>
+
+</body>
+</html>
+
